@@ -1,7 +1,9 @@
 package tests;
 
 import data.TestData;
+import helpers.Attach;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,15 @@ public class FillFormWithGenUserDataAndPageObjectTest extends BaseTests {
     CheckResultRegistrationForm checkResultRegistrationForm = new CheckResultRegistrationForm();
 
     TestData testData = new TestData();
+
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Скриншот результата проверки");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+
+    }
     @Feature("Проверка заполнения форм на сайте")
     @Story("Заполнение электронной формы данных о студенте")
     @DisplayName("Проверка электронной формы при заполнении всех полей формы")
