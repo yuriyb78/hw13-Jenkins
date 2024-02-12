@@ -28,13 +28,14 @@ public class RegistrationPage {
     public RegistrationPage openPage() {
 
         // Открыть браузер на заданной странице
-        open("/automation-practice-form");  // Открытие браузера на нужной странице
-        executeJavaScript("$('#fixedban').remove()"); // Скрытие рекламы
-        executeJavaScript("$('footer').remove()");  // Скрытие футера
+        open("/automation-practice-form");
         SelenideElement bannerRoot = $(".fc-consent-root");
         if (bannerRoot.isDisplayed()) {
             bannerRoot.$(byText("Consent")).click();
         }
+        executeJavaScript("$('#fixedban').remove()"); // Скрытие рекламы
+        executeJavaScript("$('footer').remove()");  // Скрытие футера
+
 
         return this;
     }
