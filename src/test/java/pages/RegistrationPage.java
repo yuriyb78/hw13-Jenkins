@@ -29,6 +29,7 @@ public class RegistrationPage {
 
         // Открыть браузер на заданной странице
         open("/automation-practice-form");
+        sleep(1000);
         SelenideElement bannerRoot = $(".fc-consent-root");
         if (bannerRoot.isDisplayed()) {
             bannerRoot.$(byText("Consent")).click();
