@@ -19,14 +19,6 @@ public class FillFormWithGenUserDataAndPageObjectTest extends BaseTests {
 
     TestData testData = new TestData();
 
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Скриншот результата проверки");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-
-    }
     @Feature("Проверка заполнения форм на сайте")
     @Story("Заполнение электронной формы данных о студенте")
     @DisplayName("Проверка электронной формы при заполнении всех полей формы")
