@@ -1,7 +1,9 @@
 package tests;
 
 import data.TestData;
-import org.junit.jupiter.api.BeforeAll;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.component.CheckResultRegistrationForm;
@@ -14,13 +16,15 @@ public class FillFormWithGenUserDataAndPageObjectTest extends BaseTests {
     CheckResultRegistrationForm checkResultRegistrationForm = new CheckResultRegistrationForm();
 
     TestData testData = new TestData();
-
-
-   // Тест с заполнением всех полей формы
-   // и проверкой правильности их заполенения в итоговой таблице
+    @Feature("Проверка заполнения форм на сайте")
+    @Story("Заполнение электронной формы данных о студенте")
+    @DisplayName("Проверка электронной формы при заполнении всех полей формы")
+    @Severity(SeverityLevel.NORMAL)
+    @Tag("Regress")
+    @Owner("Yuriy Belyaev")
     @Test
     void fillFormWithAllFieldTest(){
-        step("Открываем странцу заполнения формы", () -> {
+        step("Открываем страницу заполнения формы", () -> {
             registrationPage.openPage();
         });
 
@@ -55,12 +59,15 @@ public class FillFormWithGenUserDataAndPageObjectTest extends BaseTests {
         });
 
     }
-
-    // Тест с заполнением только обязательных полей формы
-    // и проверкой правильности их заполенения в итоговой таблице
+    @Feature("Проверка заполнения форм на сайте")
+    @Story("Заполнение электронной формы данных о студенте")
+    @DisplayName("Проверка электронной формы при заполнении только обязательных полей")
+    @Severity(SeverityLevel.BLOCKER)
+    @Tag("Smoke")
+    @Owner("Yuriy Belyaev")
     @Test
     void fillFormWithOnlyRequiredFieldTest(){
-        step("Открываем странцу заполнения формы", () -> {
+        step("Открываем страницу заполнения формы", () -> {
             registrationPage.openPage();
         });
 
@@ -89,11 +96,16 @@ public class FillFormWithGenUserDataAndPageObjectTest extends BaseTests {
 
 
     }
-
-    // Негативный тест без заполнения обязательных полей формы
+    @Feature("Проверка заполнения форм на сайте")
+    @Story("Заполнение электронной формы данных о студенте")
+    @DisplayName("Негативный тест. Проверка электроннйо формы без заполнения обязательных полей формы")
+    @Severity(SeverityLevel.BLOCKER)
+    @Tag("Smoke")
+    @Tag("Regress")
+    @Owner("Yuriy Belyaev")
     @Test
     void notFillFormRequiredFieldTest(){
-        step("Открываем странцу заполнения формы", () -> {
+        step("Открываем страницу заполнения формы", () -> {
             registrationPage.openPage();
         });
 
