@@ -60,3 +60,9 @@ task smoke_test (type: Test) {
         includeTags("Smoke")
     }
 }
+
+task regress_test (type: Test) {
+    useJUnitPlatform {
+        includeTags("Regress")
+    }
+}
