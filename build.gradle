@@ -54,18 +54,6 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
-
 }
 
-task regress_test (type: Test) {
-    useJUnitPlatform {
-        includeTags ("Regress")
-    }
-}
-
-task smoke_test (type: Test) {
-    useJUnitPlatform {
-        includeTags ("Smoke")
-    }
-}
 
