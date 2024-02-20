@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.DriverConfig;
 import helpers.Attach;
@@ -41,6 +42,7 @@ public class BaseTests {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        Selenide.closeWebDriver();
 
     }
 }
