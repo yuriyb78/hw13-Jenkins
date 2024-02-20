@@ -69,5 +69,5 @@ task regress_test (type: Test) {
     useJUnitPlatform {
         includeTags("Regress")
     }
- //   systemProperties(System.getProperties())
+    systemProperties(System.getProperties())
 }
