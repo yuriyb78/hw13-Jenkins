@@ -21,11 +21,11 @@ allure {
     }
 }
 
-java {
+/*java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(19) // Укажите нужную версию Java
     }
-}
+}*/
 
 repositories {
     mavenCentral()
