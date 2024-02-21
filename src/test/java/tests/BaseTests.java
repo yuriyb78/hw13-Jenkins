@@ -13,6 +13,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static java.lang.String.format;
+
 public class BaseTests {
 
     @BeforeAll
@@ -33,6 +35,7 @@ public class BaseTests {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+        System.out.println(format("%s,%s,%s", driverConfig.browserName(), driverConfig.browserVersion(), driverConfig.browserSize()));
 
     }
 
