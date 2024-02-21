@@ -22,7 +22,7 @@ public class BaseTests {
         Configuration.browser = driverConfig.browserName();
         Configuration.browserVersion = driverConfig.browserVersion();
         Configuration.browserSize = driverConfig.browserSize();
-        Configuration.remote = driverConfig.browserUrl();
+//        Configuration.remote = driverConfig.browserUrl();
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 
