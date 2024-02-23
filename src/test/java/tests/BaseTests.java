@@ -35,7 +35,6 @@ public class BaseTests {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-        System.out.println(format("%s,%s,%s", driverConfig.browserName(), driverConfig.browserVersion(), driverConfig.browserSize()));
 
     }
 
